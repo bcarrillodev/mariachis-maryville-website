@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Mariachi's Mexican Restaurant</title>
+    <meta name="description"
+        content="Full Menu at Mariachi's Mexican Restaurant. Appetizers, Salads, Combinations, and our famous Grill specials.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Poppins:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Schema could be updated for Menu page specifically, but keeping basic structure for now -->
+</head>
+
+<body>
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <a href="https://www.google.com/maps/place/2922+N+Center+St,+Maryville,+IL+62062" target="_blank"
+            class="address-link">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+            </svg>
+            <strong>2922 N Center St, Maryville, IL 62062</strong>
+        </a>
+    </div>
+
+    <!-- Sticky Navbar -->
+    <nav class="sticky-nav">
+        <div class="container nav-container">
+            <div class="logo">
+                <picture>
+                    <source srcset="assets/logo_mobile.png" media="(max-width: 768px)">
+                    <img src="assets/logo_full.png" alt="Mariachi's" style="margin-top: 9px;">
+                </picture>
+            </div>
+            <button class="hamburger-menu" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="index.html#about">About</a>
+                <a href="#" class="active">Menu</a>
+                <a href="index.html#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Full Menu Section -->
+    <section id="menu" class="full-menu-section" style="padding-top: 2rem;">
+        <div class="container">
+            <a href="index.html" class="back-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" />
+                </svg>
+                Back to Home
+            </a>
+            <h2 class="section-title">Full Menu</h2>
+
+            <div class="menu-categories">
+                <!-- Appetizers -->
+                <div class="menu-category">
+                    <h3>Appetizers</h3>
+                    <div class="menu-items-grid">
+                        <div class="menu-item">
+                            <div class="item-header">
+                                <span class="item-name">Mariachi's Fiesta Platter</span>
+                            </div>
+                            <p class="item-desc">Santa Fe steak nachos, hot chicken wings, quesadillas, & taquitos.
+                                Served with guacamole, sour cream, and pico de gallo.</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-header">
+                                <span class="item-name">Jalisco Fajita Nachos</span>
+                            </div>
+                            <p class="item-desc">Onions, peppers, and choice of steak, shrimp or chicken on chips with
+                                famous cheese sauce.</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-header">
+                                <span class="item-name">Santa Fe Nachos</span>
+                            </div>
+                            <p class="item-desc">Individual nachos with beans & melted cheese. Choice of grilled chicken
+                                or steak. With toppings.</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-header">
+                                <span class="item-name">BBQ or Hot Wings</span>
+                            </div>
+                            <p class="item-desc">Over one pound of tender wings. BBQ or Hot Honey sauce.</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-header">
+                                <span class="item-name">Cheese Dip</span>
+                            </div>
+                            <p class="item-desc">Creamy, melted cheese served with a side for dipping.</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-header">
+                                <span class="item-name">Guacamole Dip</span>
+                            </div>
+                            <p class="item-desc">Fresh and creamy dip made with ripe avocados.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Salads -->
+                <div class="menu-category">
+                    <h3>Salads & Soups</h3>
+                    <div class="menu-items-grid">
+                        <div class="menu-item">
+                            <div class="item-header">
+                                <span class="item-name">Mexican Caesar Salad</span>
+                            </div>
+                            <p class="item-desc">Romaine lettuce, Caesar dressing, cotija cheese, tomatoes & tortilla
+                                chips.</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-header">
+                                <span class="item-name">Taco Salad</span>
+                            </div>
+                            <p class="item-desc">Crisp flour tortilla with beans, lettuce, pico, guacamole, cheese, sour
+                                cream, & ground beef or chicken.</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-header">
+                                <span class="item-name">House Salad</span>
+                            </div>
+                            <p class="item-desc">Lettuce, diced tomatoes & shredded cheese.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Combinations -->
+                <div class="menu-category">
+                    <h3>Combinations</h3>
+                    <div class="menu-items-grid">
+                        <div class="menu-item">
+                            <div class="item-header">
+                                <span class="item-name">Pick Any Two</span>
+                            </div>
+                            <p class="item-desc">Create your own combo.</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-header">
+                                <span class="item-name">Pick Any Three</span>
+                            </div>
+                            <p class="item-desc">Create your own combo.</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-header">
+                                <span class="item-name">Burrito Suizo</span>
+                            </div>
+                            <p class="item-desc">Flour tortilla filled with beans, cheese and meat. Topped with cheese
+                                sauce.</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-header">
+                                <span class="item-name">Chimichangas</span>
+                            </div>
+                            <p class="item-desc">Deep fried, smothered with famous cheese sauce.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Grill -->
+                <div class="menu-category">
+                    <h3>Mariachi's Grill</h3>
+                    <div class="menu-items-grid">
+                        <div class="menu-item">
+                            <div class="item-header">
+                                <span class="item-name">Suprema</span>
+                            </div>
+                            <p class="item-desc">Steak, chicken, vegetables.</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-header">
+                                <span class="item-name">Mariachis Loco</span>
+                            </div>
+                            <p class="item-desc">Steak, chicken, shrimp.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <a href="index.html" class="back-btn" style="margin-top: 5rem;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" />
+                </svg>
+                Back to Home
+            </a>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Mariachi's Mexican Restaurant. All Rights Reserved.</p>
+            <div class="social-links">
+                <a href="https://www.facebook.com/p/Maryville-Mariachis-100089984702552/" target="_blank">Facebook</a>
+                <a href="https://www.tripadvisor.com/Restaurant_Review-g36331-d4913753-Reviews-Mariachi_s-Maryville_Illinois.html"
+                    target="_blank">TripAdvisor</a>
+                <a href="https://www.yelp.com/biz/mariachis-mexican-restaurant-and-cantina-maryville"
+                    target="_blank">Yelp</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Sticky Bottom Bar (Mobile) -->
+    <div class="mobile-bottom-bar">
+        <a href="#" class="action-btn menu-btn">Full Menu</a>
+        <a href="tel:+16182886300" class="action-btn call-btn">Call Now</a>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
