@@ -1,14 +1,9 @@
-/* 
- * Mariachi's Mexican Restaurant - Design System
- * Theme: Bold, Vibrant, "Agave & Earth"
- */
-
 :root {
     /* Color Palette */
     --primary-red: #C90500;
     --primary-amber: #FFC107;
     --primary-green: #007D08;
-    --accent-teal: #009E0A;
+    --accent-light: #009E0A;
     --accent-dark: #3E2723;
 
     --bg-light: #FDFBF7;
@@ -507,15 +502,15 @@ section {
 
 .logos-grid a {
     font-weight: 700;
-    color: var(--accent-teal);
+    color: var(--accent-light);
     font-size: 1.2rem;
-    border: 2px solid var(--accent-teal);
+    border: 2px solid var(--accent-light);
     padding: 0.5rem 1rem;
     border-radius: 4px;
 }
 
 .logos-grid a:hover {
-    background-color: var(--accent-teal);
+    background-color: var(--accent-light);
     color: white;
 }
 
