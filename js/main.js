@@ -119,12 +119,6 @@ document.addEventListener("DOMContentLoaded", () => {
     '.contact-form[data-netlify="true"]',
   );
   if (contactForm) {
-    const submitBtn = contactForm.querySelector('button[type="submit"]');
-    if (submitBtn) {
-      submitBtn.addEventListener("mouseover", loadRecaptcha, { once: true });
-      submitBtn.addEventListener("focus", loadRecaptcha, { once: true });
-    }
-
     let recaptchaLoaded = false;
     let formObserver = null;
 
@@ -142,6 +136,13 @@ document.addEventListener("DOMContentLoaded", () => {
         formObserver.disconnect();
       }
     };
+
+    const submitBtn = contactForm.querySelector('button[type="submit"]');
+    
+    if (submitBtn) {
+      submitBtn.addEventListener("mouseover", loadRecaptcha, { once: true });
+      submitBtn.addEventListener("focus", loadRecaptcha, { once: true });
+    }
 
     contactForm.addEventListener("focusin", loadRecaptcha, { once: true });
     contactForm.addEventListener("pointerdown", loadRecaptcha, { once: true });
