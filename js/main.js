@@ -146,7 +146,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     contactForm.addEventListener("focusin", loadRecaptcha, { once: true });
     contactForm.addEventListener("pointerdown", loadRecaptcha, { once: true });
-    contactForm.addEventListener("touchstart", loadRecaptcha, { once: true });
+    contactForm.addEventListener("touchstart", loadRecaptcha, { once: true, passive: true });
 
     if ("IntersectionObserver" in window) {
       formObserver = new IntersectionObserver(
