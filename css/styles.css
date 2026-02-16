@@ -1,7 +1,7 @@
 :root {
     /* Color Palette */
     --primary-red: #C90500;
-    --primary-amber: #FFC107;
+    --primary-gold: #FFD700;
     --primary-green: #007D08;
     --accent-light: #009E0A;
     --accent-dark: #3E2723;
@@ -89,7 +89,7 @@ a {
 }
 
 .btn-secondary {
-    background-color: var(--primary-amber);
+    background-color: var(--primary-gold);
     color: var(--accent-dark);
 }
 
@@ -138,7 +138,7 @@ section {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    color: var(--primary-amber);
+    color: var(--primary-gold);
     font-family: var(--font-heading);
 }
 
@@ -239,6 +239,13 @@ section {
     background-position: center;
     opacity: 0;
     transition: opacity 1s ease-in-out;
+}
+
+.slide-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 .slide.active {
@@ -343,7 +350,7 @@ section {
 }
 
 .catering-link.primary {
-    color: var(--primary-amber);
+    color: var(--primary-gold);
     font-weight: 800;
     font-size: 1.1rem;
     /* Larger call action */
@@ -422,23 +429,17 @@ section {
     right: -10px;
 }
 
-/* Adjust for mobile - maybe hide arrows or make them smaller if touch is primary */
 @media (max-width: 768px) {
     .carousel-nv-btn {
         width: 36px;
         height: 36px;
         display: none;
-        /* Often cleaner to hide arrows on pure touch devices, but user asked for them to make it obvious */
     }
 
     .carousel-wrapper:hover .carousel-nv-btn {
         display: flex;
-        /* Show on interaction or just keep them visible if user insists */
     }
 
-    /* Keeping them hidden on mobile by default usually better UX, 
-       but user said "make it obvious". Let's show them but smaller.
-    */
     .carousel-nv-btn {
         display: flex;
     }
@@ -462,7 +463,6 @@ section {
 .card-image {
     height: 200px;
     background-color: #ddd;
-    /* Placeholder */
     background-size: cover;
     background-position: center;
 }
@@ -563,6 +563,7 @@ section {
     .gallery-wrapper {
         grid-template-columns: repeat(4, 1fr);
         /* Desktop: 4 columns */
+        grid-auto-rows: 300px;
         max-width: 100%;
         margin: 0;
         padding: 0;
@@ -570,7 +571,7 @@ section {
     }
 
     .gallery-item {
-        height: 300px;
+        height: 100%;
     }
 
     /* Desktop Mosaic Pattern */
@@ -616,7 +617,7 @@ section {
 }
 
 .contact-section .section-title {
-    color: var(--primary-amber);
+    color: var(--primary-gold);
 }
 
 .contact-intro {
@@ -659,7 +660,7 @@ section {
 .address-phone {
     margin-bottom: 1rem;
     font-size: 1rem;
-    color: var(--primary-amber);
+    color: var(--primary-gold);
     text-align: center;
 }
 
@@ -668,7 +669,7 @@ section {
 .address-line {
     margin-bottom: 1rem;
     font-size: 1rem;
-    color: var(--primary-amber);
+    color: var(--primary-gold);
     text-align: center;
 }
 
@@ -676,7 +677,6 @@ section {
     margin-bottom: 0.2rem;
     display: flex;
     justify-content: space-between;
-    /* Spread day and time if needed, or just left align */
     gap: 1rem;
     border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
 }
@@ -779,6 +779,10 @@ footer {
 /* Mobile Bottom Bar (Hidden on desktop) */
 .mobile-bottom-bar {
     display: none;
+}
+
+.hidden {
+  display: none;
 }
 
 /* Mobile Responsiveness */

@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Thank You - Mariachi's Mexican Restaurant</title>
+    <meta name="description" content="Thank you — contact form received." />
+    <link rel="icon" type="image/avif" href="assets/logo_mobile.avif">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lora:wght@400&family=Poppins:wght@600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/base.min.css">
+    <style>
+        html,
+        body {
+            height: 100%;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        main {
+            flex: 1 0 auto;
+        }
+
+        footer {
+            flex-shrink: 0;
+        }
+
+        @media (max-width: 768px) {
+
+            /* This page doesn't include the site mobile bottom bar, so
+               remove the global bottom padding applied site-wide so
+               the footer can sit flush with the viewport bottom. */
+            body {
+                padding-bottom: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="top-bar">
+        <a href="https://www.google.com/maps/place/2922+N+Center+St,+Maryville,+IL+62062" target="_blank"
+            class="address-link">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+            </svg>
+            <strong>2922 N Center St, Maryville, IL 62062</strong>
+        </a>
+    </div>
+
+    <nav class="sticky-nav">
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="index.html" aria-label="Home">
+                    <picture>
+                        <source srcset="assets/logo_mobile.avif" media="(max-width: 768px)">
+                        <img src="assets/logo_full.avif" alt="Mariachi's" style="margin-top: 9px;" width="200"
+                            height="100" decoding="async">
+                    </picture>
+                </a>
+            </div>
+            <button class="hamburger-menu" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="index.html#about">About</a>
+                <a href="menu.html">Menu</a>
+                <a href="index.html#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="container" style="padding:4rem 1rem; text-align:center;">
+            <a href="index.html#home" class="back-btn"
+                style="margin-bottom:1.5rem; display:inline-flex; align-items:center;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" />
+                </svg>
+                Back to Home
+            </a>
+
+            <h1 style="font-family: Lora, serif; font-size:48px; margin-top:0.5rem;">Thank You</h1>
+            <p
+                style="font-family: Poppins, sans-serif; font-size:18px; color:var(--muted-text, #555); max-width:720px; margin:1rem auto 0;">
+                Your contact form has been submitted. We will contact you as soon as possible.
+            </p>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Mariachi's Mexican Restaurant. All Rights Reserved.</p>
+            <div class="social-links">
+                <a href="https://www.facebook.com/p/Maryville-Mariachis-100089984702552/" target="_blank">Facebook</a>
+                <a href="https://www.tripadvisor.com/Restaurant_Review-g36331-d4913753-Reviews-Mariachi_s-Maryville_Illinois.html"
+                    target="_blank">TripAdvisor</a>
+                <a href="https://www.yelp.com/biz/mariachis-mexican-restaurant-and-cantina-maryville"
+                    target="_blank">Yelp</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.min.js"></script>
+</body>
+
+</html>

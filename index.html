@@ -2,36 +2,35 @@
 <html lang="en">
 
 <head>
+    <link rel="preload" href="assets/hero_fajita_burrito.avif" as="image" fetchpriority="high">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="index, follow">
     <title>Mariachi's Mexican Restaurant - Maryville, IL</title>
     <meta name="description"
         content="Mariachi's Mexican Restaurant in Maryville, IL. Authentic Mexican cuisine, casual atmosphere, and famous margaritas.">
-    <link rel="canonical" href="http://mariachismexfood.com/">
-    <link rel="icon" type="image/png" href="assets/logo_mobile.png">
+    <link rel="canonical" href="http://mariachismaryville.com/">
+    <link rel="icon" type="image/avif" href="assets/logo_mobile.avif">
     <meta property="og:title" content="Mariachi's Mexican Restaurant - Maryville, IL">
     <meta property="og:description"
         content="Authentic Mexican cuisine and famous margaritas in Maryville. Visit Mariachi's for casual dining, vibrant decor, and spectacular service.">
-    <meta property="og:image" content="http://mariachismexfood.com/assets/hero_fajita_burrito.jpg">
-    <meta property="og:url" content="http://mariachismexfood.com/">
+    <meta property="og:image" content="http://mariachismaryville.com/assets/hero_fajita_burrito.avif">
+    <meta property="og:url" content="http://mariachismaryville.com/">
     <meta property="og:type" content="business.business">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Mariachi's Mexican Restaurant - Maryville, IL">
     <meta name="twitter:description" content="Authentic Mexican cuisine and famous margaritas in Maryville, IL.">
-    <meta name="twitter:image" content="http://mariachismexfood.com/assets/hero_fajita_burrito.jpg">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Poppins:wght@400;600;700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
+    <meta name="twitter:image" content="http://mariachismaryville.com/assets/hero_fajita_burrito.avif">
+    <link rel="stylesheet" href="css/base.min.css">
+    <noscript>
+        <script src="https://www.google.com/recaptcha/api.js"></script>
+    </noscript>
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Restaurant",
       "name": "Mariachi's Mexican Restaurant",
-      "image": "http://mariachismexfood.com/assets/hero_fajita_burrito.jpg",
+      "image": "http://mariachismaryville.com/assets/hero_fajita_burrito.avif",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "2922 N Center St",
@@ -45,7 +44,7 @@
         "latitude": 38.7365094,
         "longitude": -89.9561422
       },
-      "url": "http://mariachismexfood.com/",
+      "url": "http://mariachismaryville.com/",
       "telephone": "+16182886300",
       "openingHoursSpecification": [
         {
@@ -67,7 +66,7 @@
           "closes": "21:00"
         }
       ],
-      "menu": "http://mariachismexfood.com/menu.html",
+      "menu": "http://mariachismaryville.com/menu.html",
       "servesCuisine": "Mexican"
     }
     </script>
@@ -90,10 +89,13 @@
     <nav class="sticky-nav">
         <div class="container nav-container">
             <div class="logo">
-                <picture>
-                    <source srcset="assets/logo_mobile.png" media="(max-width: 768px)">
-                    <img src="assets/logo_full.png" alt="Mariachi's" style="margin-top: 9px;">
-                </picture>
+                <a href="index.html" aria-label="Home">
+                    <picture>
+                        <source srcset="assets/logo_mobile.avif" media="(max-width: 768px)">
+                        <img src="assets/logo_full.avif" alt="Mariachi's" style="margin-top: 9px;" width="200"
+                            height="100" decoding="async">
+                    </picture>
+                </a>
             </div>
             <button class="hamburger-menu" aria-label="Toggle Menu">
                 <span></span>
@@ -109,225 +111,263 @@
         </div>
     </nav>
 
-    <!-- Hero Gallery (Slideshow) -->
-    <section id="home" class="hero-gallery">
-        <div class="slide active" style="background-image: url('assets/hero_fajita_burrito.jpg');"></div>
-        <div class="slide" style="background-image: url('assets/hero_santa_fe_nachos.jpg');"></div>
-        <div class="slide" style="background-image: url('assets/hero_quesadillas.jpg');"></div>
-        <div class="slide" style="background-image: url('assets/hero_chimi_ranchera.jpg');"></div>
-
-        <div class="hero-overlay">
-            <h1>Authentic Mexican Flavors</h1>
-            <p>Maryville's Favorite Spot for Tacos & Tequila</p>
-            <div class="desktop-cta">
-                <a href="menu.html" class="btn btn-primary">View Menu</a>
-                <a href="tel:+16182886300" class="btn btn-secondary">Order Carry-out</a>
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Gallery (Slideshow) -->
+        <section id="home" class="hero-gallery">
+            <div class="slide active slide-lcp">
+                <img src="assets/hero_fajita_burrito.avif" alt="Fajita burrito" class="slide-image" width="1920"
+                    height="1080" fetchpriority="high" loading="eager" decoding="async">
             </div>
-        </div>
-    </section>
-
-    <!-- Info Bar -->
-    <section class="info-bar">
-        <div class="container info-bar-content">
-            <div class="info-row">
-                <span class="label">Open Today:</span> <span id="hours-display">11am - 9pm</span>
+            <div class="slide" role="img" aria-label="Santa Fe Nachos" data-bg="assets/hero_santa_fe_nachos.avif"></div>
+            <div class="slide" role="img" aria-label="Cheesy Quesadillas" data-bg="assets/hero_quesadillas.avif"></div>
+            <div class="slide" role="img" aria-label="Chimi Ranchera platter" data-bg="assets/hero_chimi_ranchera.avif">
             </div>
-            <div class="info-row catering-block">
-                <span class="catering-label">Call for Carry Out</span>
-                <div class="catering-links">
-                    <a href="tel:+16182886300" class="catering-link primary">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                            viewBox="0 0 16 16">
-                            <path fill-rule="evenodd"
-                                d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
-                        </svg>
-                        (618) 288-6300
-                    </a>
+
+            <div class="hero-overlay">
+                <h1>Authentic Mexican Flavors</h1>
+                <p>Maryville's Favorite Spot for Tacos & Tequila</p>
+                <div class="desktop-cta">
+                    <a href="menu.html" class="btn btn-primary">View Menu</a>
+                    <a href="tel:+16182886300" class="btn btn-secondary">Order Carry-out</a>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- About Section -->
-    <section id="about" class="about-section">
-        <div class="container">
-            <h2 class="section-title">Experience Mariachi's</h2>
-            <p>Casual, cozy, and family-friendly. We pride ourselves on spectacular service and an inviting atmosphere
-                featuring vibrant decor and a full bar. Come by and visit us for delicious Mexican cuisine and tasty
-                margaritas. Enjoy a taste of Mexico right here in Maryville!</p>
-        </div>
-    </section>
-
-    <!-- Menu Highlights Carousel -->
-    <section class="menu-highlights">
-        <div class="container">
-            <h2 class="section-title">Menu Highlights</h2>
-            <div class="carousel-wrapper">
-                <button class="carousel-nv-btn prev" aria-label="Scroll Left">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <polyline points="15 18 9 12 15 6"></polyline>
-                    </svg>
-                </button>
-                <div class="carousel-container">
-                    <!-- Cards will be populated here manually for now to ensure structure -->
-                    <div class="menu-card">
-                        <div class="card-image" style="background-image: url('assets/fajita_burrito.jpg')"></div>
-                        <div class="card-content">
-                            <h3>Fajita Burrito</h3>
-                            <p>Beans, pico de gallo, ground beef, and our famous cheese dip.</p>
-                        </div>
-                    </div>
-                    <div class="menu-card">
-                        <div class="card-image" style="background-image: url('assets/santa_fe_nachos.jpg')"></div>
-                        <div class="card-content">
-                            <h3>Santa Fe Nachos</h3>
-                            <p>Steak, shrimp, or chicken with grilled peppers and onions.</p>
-                        </div>
-                    </div>
-                    <div class="menu-card">
-                        <div class="card-image" style="background-image: url('assets/quesadillas.jpg')"></div>
-                        <div class="card-content">
-                            <h3>Quesadillas</h3>
-                            <p>Made with Sauza Tequila. Try our famous Peach flavor!</p>
-                        </div>
-                    </div>
-                    <div class="menu-card">
-                        <div class="card-image" style="background-image: url('assets/combo_plate.jpg')"></div>
-                        <div class="card-content">
-                            <h3>Combination Plates</h3>
-                            <p>Made with Sauza Tequila. Try our famous Peach flavor!</p>
-                        </div>
-                    </div>
+        <!-- Info Bar -->
+        <section class="info-bar">
+            <div class="container info-bar-content">
+                <div class="info-row">
+                    <span class="label">Open Today:</span> <span id="hours-display">11am - 9pm</span>
                 </div>
-                <button class="carousel-nv-btn next" aria-label="Scroll Right">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <polyline points="9 18 15 12 9 6"></polyline>
-                    </svg>
-                </button>
-            </div>
-        </div>
-    </section>
-
-    <!-- Featured In Section -->
-    <section class="featured-in">
-        <div class="container">
-            <h3>Featured In</h3>
-            <div class="logos-grid">
-                <a href="https://www.riversandroutes.com/directory/mariachis-maryville/" target="_blank">Rivers &
-                    Routes</a>
-                <a href="https://www.enjoyillinois.com/explore/listing/mariachis/" target="_blank">Enjoy Illinois</a>
-                <a href="https://www.theintelligencer.com/news/article/mariachis-restaurant-maryville-il-20206724.php"
-                    target="_blank">The Intelligencer</a>
-            </div>
-        </div>
-    </section>
-
-
-
-    <!-- Image Gallery -->
-    <section class="gallery-section">
-        <div class="gallery-wrapper">
-            <div class="gallery-item">
-                <img src="assets/santa_fe_nachos.jpg" alt="Santa Fe Nachos">
-            </div>
-            <div class="gallery-item">
-                <img src="assets/quesadillas.jpg" alt="Quesadillas">
-            </div>
-            <div class="gallery-item">
-                <img src="assets/fajita_burrito.jpg" alt="Fajita Burrito">
-            </div>
-            <div class="gallery-item">
-                <img src="assets/combo_plate.jpg" alt="Combination Plate">
-            </div>
-            <div class="gallery-item">
-                <img src="assets/hero_chimi_ranchera.jpg" alt="Chimichanga">
-            </div>
-            <div class="gallery-item">
-                <img src="assets/hero_fajita_burrito.jpg" alt="Delicious Mexican Food">
-            </div>
-            <div class="gallery-item">
-                <img src="assets/hero_quesadillas.jpg" alt="Tasty Quesadillas">
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact-section">
-        <div class="container">
-            <h2 class="section-title">Contact Us</h2>
-            <p class="contact-intro">Planning a party or have a question? Reach out!</p>
-            <form class="contact-form">
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-                <textarea placeholder="Your Message (Catering inquiry, feedback, etc.)" rows="4" required></textarea>
-                <button type="submit" class="btn btn-primary">Send Message</button>
-            </form>
-
-            <div class="location-info">
-                <div class="map-container">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3112.5562703816223!2d-89.9561422!3d38.7365094!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8875fed339ade6bb%3A0x6606c25ead51d90e!2sMariachi's!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
-                        width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                </div>
-                <div class="address-hours">
-                    <p class="address-line">
-                        <a href="https://www.google.com/maps/place/2922+N+Center+St,+Maryville,+IL+62062"
-                            target="_blank" class="address-link">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                viewBox="0 0 16 16">
-                                <path
-                                    d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
-                            </svg>
-                            <strong>2922 N Center St, Maryville, IL 62062</strong>
-                        </a>
-                    </p>
-                    <p class="address-phone">
-                        <a href="tel:+16182886300" class="address-link">
+                <div class="info-row catering-block">
+                    <span class="catering-label">Call for Carry Out</span>
+                    <div class="catering-links">
+                        <a href="tel:+16182886300" class="catering-link primary">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                 viewBox="0 0 16 16">
                                 <path fill-rule="evenodd"
                                     d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
                             </svg>
-                            <strong>(618) 288-6300</strong>
+                            (618) 288-6300
                         </a>
-                    </p>
-                    <div class="daily-hours">
-                        <p><span>Monday:</span> 11 a.m. - 9 p.m.</p>
-                        <p><span>Tuesday:</span> 11 a.m. - 9 p.m.</p>
-                        <p><span>Wednesday:</span> 11 a.m. - 9 p.m.</p>
-                        <p><span>Thursday:</span> 11 a.m. - 9 p.m.</p>
-                        <p><span>Friday:</span> 11 a.m. - 10 p.m.</p>
-                        <p><span>Saturday:</span> 11 a.m. - 10 p.m.</p>
-                        <p><span>Sunday:</span> 12 p.m. - 9 p.m.</p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2026 Mariachi's Mexican Restaurant. All Rights Reserved.</p>
-            <div class="social-links">
-                <a href="https://www.facebook.com/p/Maryville-Mariachis-100089984702552/" target="_blank">Facebook</a>
-                <a href="https://www.tripadvisor.com/Restaurant_Review-g36331-d4913753-Reviews-Mariachi_s-Maryville_Illinois.html"
-                    target="_blank">TripAdvisor</a>
-                <a href="https://www.yelp.com/biz/mariachis-mexican-restaurant-and-cantina-maryville"
-                    target="_blank">Yelp</a>
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            <div class="container">
+                <h2 class="section-title">Experience Mariachi's</h2>
+                <p>Casual, cozy, and family-friendly. We pride ourselves on spectacular service and an inviting
+                    atmosphere
+                    featuring vibrant decor and a full bar. Come by and visit us for delicious Mexican cuisine and tasty
+                    margaritas. Enjoy a taste of Mexico right here in Maryville!</p>
             </div>
+        </section>
+
+        <!-- Menu Highlights Carousel -->
+        <section class="menu-highlights">
+            <div class="container">
+                <h2 class="section-title">Menu Highlights</h2>
+                <div class="carousel-wrapper">
+                    <button class="carousel-nv-btn prev" aria-label="Scroll Left">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="15 18 9 12 15 6"></polyline>
+                        </svg>
+                    </button>
+                    <div class="carousel-container">
+                        <!-- Cards will be populated here manually for now to ensure structure -->
+                        <div class="menu-card">
+                            <div class="card-image"><img src="assets/fajita_burrito.avif" alt="Fajita Burrito"
+                                    width="300" height="200" loading="lazy" decoding="async"></div>
+                            <div class="card-content">
+                                <h3>Fajita Burrito</h3>
+                                <p>Our burrito kicked up a notch! Served on a sizzling hot skillet on a bed of onions,
+                                    peppers, and covered with cheese sauce & ranchero sauce.</p>
+                            </div>
+                        </div>
+                        <div class="menu-card">
+                            <div class="card-image"><img src="assets/santa_fe_nachos.avif" alt="Santa Fe Nachos"
+                                    width="300" height="200" loading="lazy" decoding="async"></div>
+                            <div class="card-content">
+                                <h3>Santa Fe Nachos</h3>
+                                <p>Individual style nachos topped with beans & melted cheese.
+                                    Your choice of grilled chicken or steak. Served with
+                                    guacamole, pico de gallo, lettuce & sour cream.</p>
+                            </div>
+                        </div>
+                        <div class="menu-card">
+                            <div class="card-image"><img src="assets/quesadillas.avif" alt="Quesadillas" width="300"
+                                    height="200" loading="lazy" decoding="async"></div>
+                            <div class="card-content">
+                                <h3>Quesadillas</h3>
+                                <p>Large flour tortillas stuffed with mixed cheese. Served with
+                                    guacamole, pico de gallo, lettuce & sour cream. Choice of
+                                    Cheese, Vegetables, Chicken, Steak, Shrimp & Vegetables, or
+                                    BBQ Chicken.</p>
+                            </div>
+                        </div>
+                        <div class="menu-card">
+                            <div class="card-image"><img src="assets/combo_plate.avif" alt="Combination Plates"
+                                    width="300" height="200" loading="lazy" decoding="async"></div>
+                            <div class="card-content">
+                                <h3>Combination Plates</h3>
+                                <p>Pick any 2 or pick any 3! Choose from enchilada, burrito, tamale, chile relleno,
+                                    taco, mini chimi, or tostada. Served with rice and beans.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-nv-btn next" aria-label="Scroll Right">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured In Section -->
+        <section class="featured-in">
+            <div class="container">
+                <h3>Featured In</h3>
+                <div class="logos-grid">
+                    <a href="https://www.riversandroutes.com/directory/mariachis-maryville/" target="_blank">Rivers &
+                        Routes</a>
+                    <a href="https://www.enjoyillinois.com/explore/listing/mariachis/" target="_blank">Enjoy
+                        Illinois</a>
+                    <a href="https://www.theintelligencer.com/news/article/mariachis-restaurant-maryville-il-20206724.php"
+                        target="_blank">The Intelligencer</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Image Gallery -->
+        <section class="gallery-section">
+            <div class="gallery-wrapper">
+                <div class="gallery-item">
+                    <img src="assets/santa_fe_nachos.avif" alt="Santa Fe Nachos" width="1000" height="500"
+                        loading="lazy" decoding="async">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/quesadillas.avif" alt="Quesadillas" width="1000" height="500" loading="lazy"
+                        decoding="async">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/fajita_burrito.avif" alt="Fajita Burrito" width="1000" height="500" loading="lazy"
+                        decoding="async">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/combo_plate.avif" alt="Combination Plate" width="1000" height="500" loading="lazy"
+                        decoding="async">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/hero_chimi_ranchera.avif" alt="Chimichanga" width="1000" height="500"
+                        loading="lazy" decoding="async">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/hero_fajita_burrito.avif" alt="Delicious Mexican Food" width="1000" height="500"
+                        loading="lazy" decoding="async">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/hero_quesadillas.avif" alt="Tasty Quesadillas" width="1000" height="500"
+                        loading="lazy" decoding="async">
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <h2 class="section-title">Contact Us</h2>
+                <p class="contact-intro">Planning a party or have a question? Reach out!</p>
+                <form class="contact-form" name="contact" method="POST" action="success.html" data-netlify="true"
+                    data-netlify-honeypot="bot-field" data-netlify-recaptcha="true">
+                    <p class="hidden" style="display:none;">
+                        <label>Don't fill this out: <input name="bot-field" /></label>
+                    </p>
+                    <input type="hidden" name="form-name" value="contact" />
+                    <input type="text" name="visitor-name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" placeholder="Your Message (Catering inquiry, feedback, etc.)" rows="4"
+                        required></textarea>
+                    <div data-netlify-recaptcha="true"></div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+
+                <div class="location-info">
+                    <div class="map-container">
+                        <iframe title="Mariachi's Mexican Restaurant Location Map - 2922 N Center St, Maryville, IL"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3112.5562703816223!2d-89.9561422!3d38.7365094!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8875fed339ade6bb%3A0x6606c25ead51d90e!2sMariachi's!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
+                            width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                    <div class="address-hours">
+                        <p class="address-line">
+                            <a href="https://www.google.com/maps/place/2922+N+Center+St,+Maryville,+IL+62062"
+                                target="_blank" class="address-link">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    viewBox="0 0 16 16">
+                                    <path
+                                        d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                                </svg>
+                                <strong>2922 N Center St, Maryville, IL 62062</strong>
+                            </a>
+                        </p>
+                        <p class="address-phone">
+                            <a href="tel:+16182886300" class="address-link">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+                                </svg>
+                                <strong>(618) 288-6300</strong>
+                            </a>
+                        </p>
+                        <div class="daily-hours">
+                            <p><span>Monday:</span> 11 a.m. - 9 p.m.</p>
+                            <p><span>Tuesday:</span> 11 a.m. - 9 p.m.</p>
+                            <p><span>Wednesday:</span> 11 a.m. - 9 p.m.</p>
+                            <p><span>Thursday:</span> 11 a.m. - 9 p.m.</p>
+                            <p><span>Friday:</span> 11 a.m. - 10 p.m.</p>
+                            <p><span>Saturday:</span> 11 a.m. - 10 p.m.</p>
+                            <p><span>Sunday:</span> 12 p.m. - 9 p.m.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <p>&copy; 2026 Mariachi's Mexican Restaurant. All Rights Reserved.</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/p/Maryville-Mariachis-100089984702552/"
+                        target="_blank">Facebook</a>
+                    <a href="https://www.tripadvisor.com/Restaurant_Review-g36331-d4913753-Reviews-Mariachi_s-Maryville_Illinois.html"
+                        target="_blank">TripAdvisor</a>
+                    <a href="https://www.yelp.com/biz/mariachis-mexican-restaurant-and-cantina-maryville"
+                        target="_blank">Yelp</a>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Sticky Bottom Bar (Mobile) -->
+        <div class="mobile-bottom-bar">
+            <a href="menu.html" class="action-btn menu-btn">View Menu</a>
+            <a href="tel:+16182886300" class="action-btn call-btn">Call Now</a>
         </div>
-    </footer>
+    </main>
 
-    <!-- Sticky Bottom Bar (Mobile) -->
-    <div class="mobile-bottom-bar">
-        <a href="menu.html" class="action-btn menu-btn">View Menu</a>
-        <a href="tel:+16182886300" class="action-btn call-btn">Call Now</a>
-    </div>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400&family=Poppins:wght@600;700&display=swap"
+        rel="stylesheet">
 
-    <script src="js/main.js"></script>
+    <script src="js/main.min.js"></script>
 </body>
 
 </html>
