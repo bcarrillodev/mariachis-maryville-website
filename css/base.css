@@ -859,3 +859,9 @@ footer {
         color: white;
     }
 }
+
+/* Center reCAPTCHA widget */
+div[data-netlify-recaptcha="true"] {
+    display: flex;
+    justify-content: center;
+}
