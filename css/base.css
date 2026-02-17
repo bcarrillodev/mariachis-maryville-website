@@ -860,8 +860,8 @@ footer {
     }
 }
 
-/* Center reCAPTCHA widget */
-div[data-netlify-recaptcha="true"] {
-    display: flex;
-    justify-content: center;
+.captcha-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px; /* Optional: adds space below the captcha */
 }
