@@ -82,11 +82,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const day = restaurantTime.getDay();
     let todayHours = "";
 
-    if (day === 0) {
-      // Sunday
-      todayHours = "12 p.m. - 9 p.m.";
-    } else if (day >= 1 && day <= 4) {
-      // Mon-Thu
+    if (day >= 0 && day <= 4) {
+      // Sun-Thu
       todayHours = "11 a.m. - 9 p.m.";
     } else {
       // Fri-Sat
@@ -138,7 +135,7 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     const submitBtn = contactForm.querySelector('button[type="submit"]');
-    
+
     if (submitBtn) {
       submitBtn.addEventListener("mouseover", loadRecaptcha, { once: true });
       submitBtn.addEventListener("focus", loadRecaptcha, { once: true });
@@ -146,7 +143,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     contactForm.addEventListener("focusin", loadRecaptcha, { once: true });
     contactForm.addEventListener("pointerdown", loadRecaptcha, { once: true });
-    contactForm.addEventListener("touchstart", loadRecaptcha, { once: true, passive: true });
+    contactForm.addEventListener("touchstart", loadRecaptcha, {
+      once: true,
+      passive: true,
+    });
 
     if ("IntersectionObserver" in window) {
       formObserver = new IntersectionObserver(
